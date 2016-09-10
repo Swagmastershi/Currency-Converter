@@ -9,8 +9,36 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.simonwebtech.currencyconverter.MainActivity">
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/moneyImage"
+        android:src="@drawable/currencyPic"
+        android:scaleType="fitCenter"
+        android:layout_marginTop="64dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Currency Converter"
+        android:id="@+id/introText"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="40sp"
+        android:textColor="#31ff1f"
+        android:background="#000000" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Convert from US Dolars to Chinese Yuan and the reverse:"
+        android:id="@+id/instructionText"
+        android:layout_marginTop="28dp"
+        android:layout_below="@+id/moneyImage"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 </RelativeLayout>
