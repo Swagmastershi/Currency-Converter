@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+import java.text.DecimalFormat;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,10 +21,11 @@ public class MainActivity extends AppCompatActivity {
             double dollarN = Double.parseDouble(dollarNumberString);
 
             double convertedNum = dollarN * 6.7;
-            convertedNum = Math.round(convertedNum);
+            DecimalFormat df = new DecimalFormat("#.00");
+            String convertedString = df.format(convertedNum);
 
             TextView tv = (TextView)findViewById(R.id.yuanFinal);
-            tv.setText(convertedNum + " Yuan");
+            tv.setText(convertedString + " Yuan");
 
         }
         catch (NumberFormatException e) {
@@ -44,10 +46,11 @@ public class MainActivity extends AppCompatActivity {
             double yuanNum = Double.parseDouble(yuanNumberString);
 
             double convertedNum = yuanNum / 6.7;
-            convertedNum = Math.round(convertedNum);
+            DecimalFormat df = new DecimalFormat("#.00");
+            String convertedString = df.format(convertedNum);
 
             TextView tv = (TextView)findViewById(R.id.dollarFinal);
-            tv.setText(convertedNum + " Dollars");
+            tv.setText(convertedString + " Yuan");
 
         }
         catch (NumberFormatException e) {
