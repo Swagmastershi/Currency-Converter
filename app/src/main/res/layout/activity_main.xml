@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/moneyImage"
-        android:src="@drawable/currencyPic"
+        android:src="@drawable/currencypic"
         android:scaleType="fitCenter"
         android:layout_marginTop="64dp"
         android:layout_alignParentTop="true"
@@ -68,7 +68,7 @@
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"
         android:ems="10"
-        android:id="@+id/editText"
+        android:id="@+id/dollarNumber"
         android:layout_below="@+id/dollarsText"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -80,7 +80,7 @@
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"
         android:ems="10"
-        android:id="@+id/editText2"
+        android:id="@+id/yuanNumber"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -94,7 +94,7 @@
         android:text=" = "
         android:id="@+id/equalsText1"
         android:textSize="30sp"
-        android:layout_alignTop="@+id/editText"
+        android:layout_alignTop="@+id/dollarNumber"
         android:layout_alignRight="@+id/moneyImage"
         android:layout_alignEnd="@+id/moneyImage" />
 
@@ -105,7 +105,7 @@
         android:text=" = "
         android:id="@+id/equalsText2"
         android:textSize="30sp"
-        android:layout_alignTop="@+id/editText2"
+        android:layout_alignTop="@+id/yuanNumber"
         android:layout_alignLeft="@+id/equalsText1"
         android:layout_alignStart="@+id/equalsText1" />
 
@@ -115,8 +115,9 @@
         android:layout_height="wrap_content"
         android:text="Convert"
         android:id="@+id/convertDollar"
-        android:layout_alignBottom="@+id/editText"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignBottom="@+id/dollarNumber"
+        android:layout_centerHorizontal="true"
+        android:onClick="dollarToYuan" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -126,7 +127,8 @@
         android:id="@+id/convertYuan"
         android:layout_alignParentBottom="true"
         android:layout_toLeftOf="@+id/equalsText2"
-        android:layout_toStartOf="@+id/equalsText2" />
+        android:layout_toStartOf="@+id/equalsText2"
+        android:onClick="yuanToDollar" />
 
     <TextView
         android:layout_width="wrap_content"
