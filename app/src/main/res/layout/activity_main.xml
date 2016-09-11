@@ -37,8 +37,114 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Convert from US Dolars to Chinese Yuan and the reverse:"
         android:id="@+id/instructionText"
-        android:layout_marginTop="28dp"
         android:layout_below="@+id/moneyImage"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Enter US $:"
+        android:id="@+id/dollarsText"
+        android:layout_marginTop="55dp"
+        android:layout_below="@+id/instructionText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Enter Chinese Yuan:"
+        android:id="@+id/yuanText"
+        android:layout_marginTop="103dp"
+        android:layout_below="@+id/dollarsText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/editText"
+        android:layout_below="@+id/dollarsText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/yuanText"
+        android:layout_alignEnd="@+id/yuanText" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/editText2"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/yuanText"
+        android:layout_alignEnd="@+id/yuanText" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text=" = "
+        android:id="@+id/equalsText1"
+        android:textSize="30sp"
+        android:layout_alignTop="@+id/editText"
+        android:layout_alignRight="@+id/moneyImage"
+        android:layout_alignEnd="@+id/moneyImage" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text=" = "
+        android:id="@+id/equalsText2"
+        android:textSize="30sp"
+        android:layout_alignTop="@+id/editText2"
+        android:layout_alignLeft="@+id/equalsText1"
+        android:layout_alignStart="@+id/equalsText1" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Convert"
+        android:id="@+id/convertDollar"
+        android:layout_alignBottom="@+id/editText"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Convert"
+        android:id="@+id/convertYuan"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/equalsText2"
+        android:layout_toStartOf="@+id/equalsText2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/yuanFinal"
+        android:text="Type number"
+        android:layout_alignTop="@+id/equalsText1"
+        android:layout_toRightOf="@+id/equalsText1"
+        android:layout_toEndOf="@+id/equalsText1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/dollarFinal"
+        android:text="Type number"
+        android:layout_alignBottom="@+id/equalsText2"
+        android:layout_toRightOf="@+id/equalsText2"
+        android:layout_toEndOf="@+id/equalsText2" />
 </RelativeLayout>
